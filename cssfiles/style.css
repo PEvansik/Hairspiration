@@ -1,0 +1,889 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+.top-promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+}
+.slide {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.slide-text {
+    width: 409px;
+    animation: scroll 12s linear infinite;
+}
+.slide-text span {
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(320px);
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(-322px);
+    }
+}
+.show {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* .top-promo a {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    border-radius: 3px;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+.top-promo a:hover {
+    color: black;
+    background-color: antiquewhite;
+    text-decoration: none;
+} */
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    height: 5rem;
+    background: linear-gradient(rgba(0, 0, 9, .9), rgba(0, 0, 0, 0.05));
+}
+.logo {
+    font-size: 2.2rem;
+    letter-spacing: .3rem;
+    padding: 1rem 0;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+    color: antiquewhite;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger {
+    width: 28px;
+    height: 28px;
+    display: none;
+}
+.nav-list {
+    display:flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+.navigation a {
+    text-decoration: none;
+    font-size: clamp(1.5rem, 1.0000rem + 0.5556vw, 1.8rem);
+    padding: .3rem;
+}
+.navigation a:hover {
+    background-color: rgba(251, 204, 147, 0.9);
+    color: black;
+    border-radius: 5px;
+}
+.nav-list li {
+    list-style-type: none;
+    margin-right: 2rem;
+    padding: 1rem 0;
+}
+.book {
+    padding: 1rem 0;
+    white-space: nowrap;
+}
+
+.ham {
+    width: 26px;
+    height: 3px;
+    display: block;
+    margin: 4px 0;
+    background-color: antiquewhite;
+    transition: all .2s ease-in-out;
+}
+.top.active {
+    transform: translateY(7px) rotate(45deg);
+}
+.bottom.active {
+    transform: translateY(-7px) rotate(-45deg);
+}
+.middle.active {
+    opacity: 0;
+}
+
+/* =============================================
+=============SECTION ONE========================
+================================================ */
+main {
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    border-bottom-right-radius: 15rem 10rem;
+    background-image: linear-gradient(rgba(34, 34, 39, .5), rgba(50, 59, 50, .5)), url(../asset/hero/woman-l.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+h1 {
+    font-size: clamp(4rem, 1.3000rem + 9.0000vw, 8.5rem);
+    margin-top: 5rem;
+    color: white;
+    /* line-height: 6rem; */
+}
+main span {
+    font-size: clamp(1.6rem, 1.4800rem + 0.4000vw, 1.8rem);
+    display: inline-block;
+    margin: 2rem 0;
+}
+.stand {
+    margin-top: 2rem;
+}
+.stand {
+    color: white;
+}
+a, .services {
+    font-size: clamp(1.6rem, 1.4800rem + 0.4000vw, 1.8rem);
+    text-decoration: none;
+    color: hsl(34, 78%, 91%);
+}
+.service {
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+.service .services:hover {
+    color: black;
+    background-color: antiquewhite;
+}
+.main-text .service a {
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    border-radius: 2rem;
+}
+
+.small {
+    display: block;
+}
+
+
+/* =============================================
+=============SECTION TWO========================
+================================================ */
+
+.sec-two {
+    padding: 10rem 3rem 3rem 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+.sec-two::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    z-index: -2;
+}
+.sectwo {
+    padding: 3rem 1rem ;
+    text-align: center;
+    width: 30%;
+
+}
+.sectwo h3 {
+    font-size: clamp(1.8rem, 1.7474rem + 0.1754vw, 2rem);
+    padding: 1rem 0;
+    color: hsla(30, 43%, 11%, 0.79);
+}
+.beaut,
+.quality,
+.products {
+    display: inline-block;
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+
+}
+.beaut::before,
+.quality::before,
+.products::before {
+    content: "";
+    position: absolute;
+    top: -.5rem;
+    left: -.5rem;
+    border-radius: 50%;
+    background-color: hsla(30, 43%, 11%, 0.2);
+    z-index: -1;
+    width: 50%;
+    height: 50%;
+    transition: all 2s ease-in-out;
+}
+.beaut img,
+.quality img,
+.products img {
+    padding: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 2;
+}
+.sectwo p {
+    font-size: clamp(1.4rem, 1.2947rem + 0.3509vw, 1.8rem);
+    line-height: 1.5;
+    text-align: center;
+}
+ /* =========================================================
+==================THIIRD SECTION==============================
+==========================================================  */
+.third-sec {
+    padding: 3rem;
+    background-image: linear-gradient(rgba(200, 200, 200, .8), rgba(200, 200, 200, .8)), url(../asset/third-section/barbershop-gadgets.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mom {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: clamp(2rem, 1.7368rem + 0.8772vw, 3rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    background-clip: text;
+    color: hsla(30, 43%, 11%, 0.79);
+}
+.moment {
+    max-width: 50rem;
+    height: auto;
+    max-height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.momentum,
+.moment {
+    width: 45%;
+}
+.momentum p {
+    font-size: clamp(1.5rem, 1.4211rem + 0.2632vw, 1.8rem);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.momentum .read {
+    font-size: clamp(1.4rem, 1.3474rem + 0.1754vw, 1.6rem);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    background-color: black;
+    color: black;
+    background: white;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+.momentum .read:hover {
+    color: white;
+    background-color: black;
+}
+.moment img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+==================FOURTH SECTION==============================
+========================================================== */
+
+.fourth-section {
+    padding: 5rem 3rem;
+}
+.prod {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.hair {
+    width: 25%;
+    height: auto;
+    object-fit: center;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: .1rem;
+    margin-top: 1rem;
+}
+
+.hair img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.hair-type {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: clamp(1.4rem, 1.3474rem + 0.1754vw, 1.6rem);
+    background-color: hsla(30, 43%, 11%, 0.7);
+    border-top-left-radius: 10px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .3rem;
+}
+.hair-type .name,
+.hair-type .price {
+    display: block;
+    color: white;
+}
+.hair-type .name {
+    font-weight: bold;
+}
+.hair-type .price {
+    text-align: right;
+}
+
+/* =========================================================
+==================FIFTH SECTION==============================
+========================================================== */
+.fifth-section {
+    background-color: rgba(200, 200, 200, .8);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 9rem;
+    color: hsla(30, 43%, 11%, 0.79);
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.haircut-color {
+    text-transform: uppercase;
+    line-height: 2;
+    width: 60%;
+    text-align: center;
+}
+.haircut-color > span {
+    display: block;
+}
+.day-offer {
+    font-size: 2rem;
+    white-space: nowrap;
+}
+.ten-percent {
+    font-size: 4rem;
+    font-weight: bold;
+}
+.on-hair,
+.candh {
+    white-space: nowrap;
+    font-size: 2.5rem;
+}
+.golden-hair {
+
+    width: 60rem;
+    height: auto;
+    width: 40%;
+    margin-right: 0;
+}
+.golden-hair img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =============================================
+=============SIXTH SECTION========================
+================================================ */
+
+.section-six {
+    padding: 5rem 0;
+}
+.six-head h2 {
+    text-transform: uppercase;
+}
+
+.six-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+.six-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(rgba(200, 100, 173,.6));
+}
+.six {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    margin: 3px;
+}
+.six img {
+    margin: 3px 0;
+    max-width: 100%;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+}
+.six img:hover {
+    transform: scale(1.05);
+}
+
+/* =============================================
+==================FOOTER========================
+================================================ */
+
+footer {
+    padding: 2rem;
+    color: antiquewhite;
+    background: rgba(40, 28, 16, 0.7);
+}
+.foot-container {
+    display: flex;
+    justify-content: space-between;
+}
+.foot-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    width: 29%;
+}
+.bottom-logo {
+    font-size: 2.2rem;
+    letter-spacing: .5rem;
+    padding: 1rem 0;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+}
+.contact,
+.ens,
+.socials {
+    font-size: clamp(1.5rem, 1.4211rem + 0.2632vw, 1.8rem);
+    margin: .5rem 0
+}
+.socials {
+    height: 2.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.socials .fb,
+.socials .tw,
+.socials .in,
+.socials .li {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+.fa-brands {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+.desc {
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+.foot-head {
+    font-size: clamp(1.5rem, 1.4211rem + 0.2632vw, 1.8rem);
+    text-transform: uppercase;
+}
+.desc > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: .5rem;
+    text-align: center;
+}
+.desc > div a {
+    font-size: clamp(1.4rem, 1.3474rem + 0.1754vw, 1.6rem);
+    color: white;
+}
+.desc > div a:hover {
+    color: antiquewhite;
+}
+.foot-head,
+.desc > div a {
+    margin: .5rem 0;
+}
+.builder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    font-size: clamp(1.4rem, 1.3474rem + 0.1754vw, 1.6rem);
+    border-top: 1px solid antiquewhite;
+}
+.builder a {
+    color: white;
+    text-decoration: underline;
+}
+.dev,
+.current {
+    margin: .5rem;
+}
+
+
+/* =============================================
+=============MEDIA QUERY========================
+================================================ */
+/* MOBILE */
+@media screen  and (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .navigation, .nav-list {
+        flex-direction: column;
+        gap: .05rem;
+    }
+
+    .navigation {
+        position: absolute;
+        width: 50%;
+        top: 4.9rem;
+        left: -100%;
+        transition: all .2sec ease-in-out;
+        height: 70vh;
+        border-radius: 2px;
+    }
+
+    .navigation.show {
+        left: 0%;
+        background-color: black;
+    }
+
+    .nav-list{
+        margin: 0;
+    }
+
+    .nav-list li{
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .book {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hamburger.active .top {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .hamburger.active .middle {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bottom {
+        transform: translateY(6px) rotate(45deg)
+    }
+
+
+    /* =============================================
+    =============SECTION ONE========================
+    ================================================ */
+
+
+    main {
+        height: 100vh;
+        background-image: linear-gradient(rgba(34, 34, 39, .5), rgba(50, 59, 50, .5)), url(../asset/hero/woman-l.jpg);
+    }
+
+    .pal {
+        display: none;
+    }
+    .small {
+        border: 1px solid red;
+        display:block;
+        width: 100%;
+        position: absolute;
+        max-width: 100%;
+        margin-top:4rem;
+    }
+    .small-palete {
+        font-size: clamp(1.4rem, 1.2800rem + 0.4000vw, 1.6rem);
+        border: 1px solid red;
+        margin: 0;
+    }
+    .small-discount {
+        font-size: clamp(1.6rem, 1.4800rem + 0.4000vw, 1.8rem);
+        color: red;
+        margin: 0;
+    }
+    .small-book-online {
+        display: block;
+        border: 1px solid red;
+    }
+
+
+    /* =============================================
+=============SECTION TWO========================
+================================================ */
+
+}
+
+@media screen  and (max-width: 800px) {
+    /* center it and leave it close to the bottom */
+    .small {
+        bottom: 2rem;
+    }
+
+        /* =========================================================
+    ==================FOURTH SECTION==============================
+    ==========================================================  */
+
+    .hair {
+        width: 35%;
+    }
+
+
+    .fourth-six {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+     /* =========================================================
+    ==================THIIRD SECTION==============================
+    ==========================================================  */
+    
+
+    .mom {
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        /* width: 90%; */
+    }
+    .momentum,
+    .moment {
+        width: 90%;
+        padding: 1.5rem 0;
+    }
+    .moment {
+        order: 1;
+    }
+    .momentum {
+        order: 2;
+    }
+    .momentum p {
+        text-align: justify;
+    }
+    img {
+        max-width: 100%;
+    }
+
+    /* =========================================================
+    ==================FOURTH SECTION==============================
+    ========================================================== */
+
+
+    /* =========================================================
+    ==================FIFTH SECTION==============================
+    ==========================================================  */
+    .fifth-section {
+        padding: 0 2rem;
+    }
+
+    /* =============================================
+    ==================FOOTER========================
+    ================================================ */
+
+    .foot-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .foot-contact {
+        width: 70%;
+    }
+    .desc {
+        width: 100%;
+    }
+}
+
+@media screen  and (max-width: 660px) {
+
+    /* =========================================================
+    ==================SECOND SECTION==============================
+    ==========================================================  */
+
+    .sec-two {
+        padding: 5rem;
+        flex-direction: column;
+    }
+    .sectwo {
+        /* border: 1px solid red; */
+        text-align: center;
+        width: 80%;
+    }
+    .beaut,
+    .quality,
+    .products {
+        display: inline-block;
+        width: 10rem;
+        height: 10rem;
+
+    }
+
+    /* =========================================================
+    ==================FIFTH SECTION==============================
+    ==========================================================  */
+    .fifth-section {
+        flex-direction: column;
+    }
+    .golden-hair {
+        display: none;
+    }
+}
+
+@media screen  and (max-width: 500px) {
+
+
+
+    .service {
+        margin-top: 5rem;
+    }
+
+
+    /* =========================================================
+    ==================FOURTH SECTION==============================
+    ========================================================== */
+
+    .fourth-section {
+        padding: 5rem 0;
+    }
+
+        /* =========================================================
+    ==================FIFTH SECTION==============================
+    ========================================================== */
+    .fifth-section {
+        padding: 0 0 0 1rem;
+    }
+    .haircut-color {
+        /* border: 1px solid red; */
+        width: 50%;
+        height: 100%;
+        text-align: center;
+    }
+    .golden-hair {
+        /* display: none; */
+    }
+
+    /* =========================================================
+    ==================FOOTER SECTION==============================
+    ========================================================== */
+    .builder {
+        padding: 1rem;
+    }
+
+}
+@media screen and (max-width: 400px) {
+
+
+    /* =========================================================
+    ==================THIIRD SECTION==============================
+    ==========================================================  */
+
+    .mom {
+        width: 95%;
+    }
+
+ 
+
+    /* =========================================================
+    ==================FOURTH SECTION==============================
+    ==========================================================  */
+    .prod {
+        flex-direction: column;
+    }
+    .hair {
+        width: 70%;
+        margin: 2rem 0;
+    }
+
+             /* =========================================================
+    ==================FIFTH SECTION==============================
+    ==========================================================  */
+
+    .fifth-section {
+        background-color: hsla(30, 43%, 11%, 0.79);
+        color: rgba(200, 200, 200, .8);
+        flex-direction: row;
+    }
+    .haircut-color {
+        z-index: 2;
+        width: 30%;
+    }
+    .golden-hair {
+        width: 100%;
+        z-index: 1;
+        display: block;
+    }
+
+
+    /* =========================================================
+    ==================FOOTER SECTION==============================
+    ==========================================================  */
+
+    .desc {
+        margin: .5rem;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .builder {
+        flex-direction: column;
+    }
+}
